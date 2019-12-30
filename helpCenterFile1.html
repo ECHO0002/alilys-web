@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>帮助中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<base href='file:\\\C:\Users\1\Desktop\alilys-web-master\'/>
+</head>
+<body>
+<h1>1. 产品简介</h1>
+<h2>1.1产品介绍：</h2>
+<p>安心宿网约房云管理平台，是安徽云创科技有限公司自主研发的一站式智慧住宿综合管理平台，整体由安心宿丨房东版，安心宿丨住户版，终端智能门锁，云视监控中心组成。</p>
+<h3>1.1.1安心宿丨房东版</h3>
+<p>帮助网约房房东智能管理，经营房源。同时自动上传⼊住⼈信息，经营数据一目了然，真正做到一部手机智慧运营。</p>
+<h3>1.1.2安心宿丨住户版</h3>
+<p>住户移动端采取⼈脸识别，认证成功后，入住信息主动上传公安系统，自动获取开门权限，从而做到⼊住流程简单便捷，让住户放心，房东省心。</p>
+<h3>1.1.3终端智能门锁</h3>
+<p>智能门锁，支持刷身份证/刷脸开门，通过门锁摄像头⼈脸对比，门锁摄像头智能抓拍，来做到确保实⼈实住，防止已⼈多住。</p>
+<h3>1.1.4云视监控中心组成</h3>
+<p>通过大数据云监控，实现公安在线平台监管，异常信息实时预警有，效提高治安监管，流动人口数据实时掌握。科技强警，有效解放警力。</p>
+<h2>1.2产品优势：</h2>
+<h3>1.1.1人脸识别，稳定便捷</h3>
+<p>该方案使用的，是云创科技自研终端智能门锁。具有传统智能门锁所不具备的，刷身份证开门，以及人脸识别开门。并且会在开门时实时抓拍进行人脸比对，通过公安数据源采取图像分析，从而确保本人开门。在安全监管方面，更加稳定便捷。</p>
+<h3>1.2.2智能抓拍，安全高效</h3>
+<p>智能抓拍，并不会对周边居民隐私造成侵犯。</p>
+<h3>1.2.3服务市场，性价比高</h3>
+<p>云创科技立足公安，服务市场，以人为本，采取薄利多销的方式。相比较市面上的其他产品，安心宿网约房云管理平台的服务费用和智能硬件费用性价比最高。</p>
+<h2>1.3使用场景：</h2>
+<p>该产品适用于客栈，民宿，公寓的智能化后台管理。</p>
+<h2>1.4产品功能：</h2>
+<p>通过大数据分析，智能研判等科技手段，帮助网约房房主智能管理，经营房源，并实时监控异常入住信息，方便线上监管。</p>
+<h2>1.5版本更新</h2>
+<p>当前为DEMO版本5.0.0。</p>
+<h1>2. 购买指南</h1>
+<h2>2.1产品价格总览</h2>
+<p>终端智能门锁：899/间
+认证服务费：3元/订单或450元/间/年</p>
+<h2>2.2购买流程</h2>
+<p>客户（即房东，下文统称房东）通过线下和售前沟通，确定购买体量，签订合同付款后，提供用户基础信息，系统会根据用户基础信息，生成账号给到客户。客户通过账号登录系统，即可正常使用。</p>
+<h2>2.3欠费流程</h2>
+<p>当系统服务费，或者认证服务费所剩余额到达限定阈值，会发送余额预警短信，通知房东提前充值。
+当系统服务费，或者认证服务费所剩余额不足时，会发送余额不足的短信，通知房东尽快充值，以免影响系统的正常使用。</p>
+<h2>2.4升级/续费</h2>
+<p>升级：如需自动报备入住信息到公安，需要将系统升级到安全民宿，购买云创科技智能门锁。
+续费：当前采取线上提交订单，线下汇款的方式，进行系统充值。线下汇款由售后人员确认后，会将房东在系统中提交的订单，通过审核，确认金额到账。</p>
+<h1>3. 快速入门</h1>
+<h2>3.1房东办理入住（PC端）</h2>
+<p>1.根据网络平台的订单入店时间，点击所需办理的房间。
+2.选择订单来源，填入房客姓名，选择离店时间，填入订单总额，填入备注（房客的特殊需求等等），点击办理预登记。显示如下弹框，则办理预登记成功。显示其他弹框，请参考《安心宿_FAQ1.0.docx》。</p>
+<p>3.点击预登记的订单，输入房客微信所绑定的手机号，开门密码（云创科技智能锁无需在这一步输入），点击办理预定。</p>
+<p>4.点击预定的订单，确认信息无误后，点击办理入住。如有变动，点击修改订单，进行修改，然后再办理入住。</p>
+<h2>3.2房东办理入住（小程序端）</h2>
+<h2>3.3房客开门入住</h2>
+<p>详见《安心宿-用户手册V2.0》</p>
+<h1>4. 操作指南</h1>
+<p>办理入住前，需要按照如下流程，进行房间基础数据的录入。</p>
+<h2>4.1添加门店</h2>
+<p>在设置下的门店管理模块中，点击添加，输入所需的门店信息后，然后点击确认。</p>
+<h2>4.2添加房型</h2>
+<p>在设置下的房型管理中，点击添加，输入房型名称，和房型备注，然后点击确认。</p>
+<h2>4.3添加房间</h2>
+<p>在设置下的门店管理中，在所要添加房间的门店下，点击添加房间，输入所需内容，点击确认。</p>
+<h2>4.4添加账号</h2>
+<p>在设置下的账号管理中，点击添加，输入所需内容，点击确认。添加成功。</p>
+<h2>4.5分配门店</h2>
+<p>在设置下的账号管理中，在所要分配门店的账号后，点击门店分配，勾选需要分配的门店，再点击确认即可。</p>
+<h1>5. 常见问题</h1>
+<h2>5.1智能门锁是什么？</h2>
+<p>智能门锁是指区别于传统机械锁的基础上改进的，在用户安全性、识别、管理性方面更加智能化简便化的锁具。智能门锁区别于传统机械锁, 是具有安全性, 便利性, 先进技术的复合型锁具。常使用非机械钥匙作为用户识别ID的成熟技术，如：指纹锁、虹膜识别门禁。在以下场所应用较多：银行，政府部门（注重安全性），以及酒店，学校宿舍，居民小区，别墅，宾馆（注重方便管理）</p>
+<h2>5.2系统访问异常</h2>
+<p>当系统更新升级时，可能会在短时间内无法正常使用。每次系统更新升级前，会将系统更新的具体时间和内容，通过通过邮箱或短信的方式，提前通知，请注意查收。</p>
+<h1>6.相关协议</h1>
+<p>《云创科技有限公司服务条款》
+《安心宿|房东版使用协议》
+《安心宿使用协议》</p>
+<h1>附录：</h1>
+<h1>1.网约房</h1>
+<p>网络预约居住房屋，即“网约房”，是指通过互联网渠道发布房源、预订并完成交易，提供用于居住的房屋以及可供居住的其他场所。
+“⽹约房”是新兴互联网业态，在移动互联网时代发展迅猛。结合以下数据来看，⽹约房隐藏着短租行业的巨大市场空间，是⼀种“刚需”。 
+“互联⽹+租房”，在⽹约房身上，有着太多传统和 前卫的杂糅，这就使得⽹约房从诞生之日起，各界始终对它缺少⼀份约束和定位，在日常经营过程中的安全隐患也频频出现。</p>
+<h1>2.认证服务费</h1>
+<p>每条订单的房客人脸识别，会产生认证服务费用。</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
